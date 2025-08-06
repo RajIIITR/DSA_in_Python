@@ -49,4 +49,4 @@ if __name__ == '__main__':
     arr1 = [6, 6, 0, 6, 8, 5, 6]
     arr2 = [1, 7, 1, 7, 8, 0, 2]
 
-    print(maxXOR(n, m, arr1, arr2)) #Output: 3
+    print(maxXOR(n, m, arr1, arr2)) #Output: 15
