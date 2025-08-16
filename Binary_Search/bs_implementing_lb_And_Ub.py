@@ -31,8 +31,8 @@ def ub(arr: list, target: int, n: int) -> int:
     return ans
 
 if '__main__' == __name__:
-    arr = [1, 2, 4, 4, 6, 8, 9, 9]
+    arr = [1, 2, 4, 4, 4, 6, 8, 9, 9]
     print(lb(arr, 4, len(arr))) # Output: 2
-    print(ub(arr, 4, len(arr))) # Output: 4
+    print(ub(arr, 4, len(arr))) # Output: 5
     print(lb(arr, 4, len(arr))) # Floor -> Output: 2
-    print(ub(arr, 4, len(arr)) - 1) # Ceil -> Output: 3
+    print(ub(arr, 4, len(arr)) - 1) # Ceil -> Output: 4
