@@ -35,7 +35,11 @@ def LastOccurance(nums: List, target: int) -> int:
 
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
-        return [firstOccurance(nums, target), LastOccurance(nums, target)]
+        first = firstOccurance(nums, target)
+        if first == -1:
+            return [-1, -1]
+        last = LastOccurance(nums, target)
+        return [first, last]
     
 if "__main__" == __name__:
     nums = [5,7,7,8,8,10]
