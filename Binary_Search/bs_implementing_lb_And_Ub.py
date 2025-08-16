@@ -30,7 +30,34 @@ def ub(arr: list, target: int, n: int) -> int:
             low = mid + 1
     return ans
 
+def floor(arr: list, target: int) -> int:
+    """
+    Returns the index of the greatest element that is less than or equal to the target.
+    """
+    n = len(arr)
+    return lb(arr, target, n) - 1
+
+def ceil(arr: list, target: int) -> int:
+    """
+    Returns the index of the smallest element that is greater than or equal to the target.
+    """
+    n = len(arr)
+    low = 0
+    high = n-1
+    ans = -1
+    while low <= high:
+        mid = (low + high) // 2
+        if arr[mid] >= target:
+            ans = mid
+            high = mid -1
+        else:
+            low = mid + 1
+    return ans
+
 if '__main__' == __name__:
     arr = [1, 2, 4, 4, 6, 8, 9, 9]
     print(lb(arr, 4, len(arr))) # Output: 3
     print(ub(arr, 4, len(arr))) # Output: 5
+    print(floor(arr, 3)) # Output: 1
+    print(ceil(arr, 3)) # Output: 2
+    print(ceil(arr, 7)) # Output: 5 
