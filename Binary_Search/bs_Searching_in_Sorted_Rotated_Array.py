@@ -21,8 +21,8 @@ def S_Rotated_Array_Unique_Element(nums: list, target: int) -> int:
 def S_Rotated_Array_Duplicate_Element(nums: list, target: int) -> bool:
     low = 0
     high = len(nums) - 1
-    mid = (high - low) // 2
     while low <= high:
+        mid = (high - low) // 2
         if nums[mid] == target:
             return True
         if nums[low] == nums[mid] == nums[high]:
